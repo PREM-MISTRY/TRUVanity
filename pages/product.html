@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - TRU Vanity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html">
+                <img src="../assets/Logo.png" alt="TRU Vanity logo" class="h-20 w-auto">
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="./about.html" class="nav-link">About Us</a>
+                <a href="./quality.html" class="nav-link">The TRU Standard</a>
+                <a href="./collections.html" class="nav-link">Collections</a>
+                <a href="dealers.html" class="nav-link">Find a Dealer</a>
+                <a href="./contact.html" class="nav-link">Partnerships</a>
+            </nav>
+            <button class="md:hidden" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentCo\r" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="../index.html" class="block py-2 nav-link">Home</a>
+            <a href="./about.html" class="block py-2 nav-link">About Us</a>
+            <a href="./quality.html" class="block py-2 nav-link">The TRU Standard</a>
+            <a href="./collections.html" class="block py-2 nav-link">Collections</a>
+            <a href="./dealers.html" class="block py-2 nav-link">Find a Dealer</a>
+            <a href="./contact.html" class="block py-2 nav-link">Partnerships</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="product-detail-container" class="container mx-auto px-6 py-12 fade-in">
+        <!-- Product details will be injected here by JavaScript -->
+        <div class="text-center py-24">
+            <h2 class="text-2xl font-semibold">Loading product...</h2>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold font-playfair">TRU Vanity</h3>
+                    <p class="mt-4 text-stone-400">Crafting elegance for modern living. Discover vanities that redefine luxury and quality.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg">Quick Links</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="./about.html" class="hover:text-amber-400 transition-colors">About Us</a></li>
+                        <li><a href="./collections.html" class="hover:text-amber-400 transition-colors">Collections</a></li>
+                        <li><a href="./quality.html" class="hover:text-amber-400 transition-colors">The TRU Standard</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg">Support</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="./contact.html" class="hover:text-amber-400 transition-colors">Contact Us</a></li>
+                        <li><a href="./dealers.html" class="hover:text-amber-400 transition-colors">Dealer Locator</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition-colors">Warranty Info</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg">Stay Connected</h4>
+                    <p class="mt-4 text-stone-400">Sign up for our newsletter to get the latest updates.</p>
+                    <div class="mt-4 flex">
+                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 bg-stone-700 border border-stone-600 rounded-l-md focus:outline-none focus:ring-2 focus:ring-amber-400">
+                        <button class="bg-amber-500 hover:bg-amber-600 text-stone-900 font-bold py-2 px-4 rounded-r-md transition-colors">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-stone-700 pt-8 text-center text-stone-500">
+                <p>&copy; 2025 TRU Vanity. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!-- Dealer Lead Modal -->
+    <div id="dealer-modal" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div id="dealer-modal-content" class="bg-white rounded-lg shadow-2xl p-8 max-w-lg w-full relative transform transition-transform duration-300 scale-95">
+            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="text-center">
+                <h2 class="text-sm font-semibold uppercase tracking-widest text-brass">Coming Soon</h2>
+                <h3 class="text-3xl font-playfair font-bold mt-2 mb-4 text-charcoal">Find a Dealer Near You</h3>
+                <p class="text-gray-600 mb-6">Our dealer network is expanding rapidly. Please fill in your details below, and we will connect you with the nearest TRU Vanity expert as soon as possible.</p>
+            </div>
+            <form id="dealer-lead-form">
+                <div class="grid grid-cols-1 gap-5">
+                    <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-100 text-charcoal px-4 py-3 rounded-md focus:outline-none focus:ring-2 ring-brass">
+                    <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-100 text-charcoal px-4 py-3 rounded-md focus:outline-none focus:ring-2 ring-brass">
+                    <input type="tel" name="phone" placeholder="Your Phone Number" required class="w-full bg-gray-100 text-charcoal px-4 py-3 rounded-md focus:outline-none focus:ring-2 ring-brass">
+                    <input type="text" name="city" placeholder="Your City" required class="w-full bg-gray-100 text-charcoal px-4 py-3 rounded-md focus:outline-none focus:ring-2 ring-brass">
+                    <button type="submit" class="bg-charcoal text-white px-8 py-3 rounded-md font-bold text-lg hover:bg-gray-700 transition w-full shadow-lg">Notify Me</button>
+                </div>
+            </form>
+            <div id="form-success-message" class="hidden mt-6 text-center">
+                <p class="text-green-600 font-semibold">Thank you! We have received your details and will be in touch shortly.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

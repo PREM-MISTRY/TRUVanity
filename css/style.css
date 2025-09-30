@@ -1,0 +1,74 @@
+/* Embedded CSS for custom styles and animations */
+:root {
+    --color-charcoal: #2F2F2F;
+    --color-brass: #B89B65;
+    --color-teal: #008080;
+    --color-off-white: #F5F5F5;
+    --color-light-grey: #e5e7eb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-off-white);
+    color: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-playfair { font-family: 'Playfair Display', serif; }
+.text-charcoal { color: var(--color-charcoal); }
+.text-brass { color: var(--color-brass); }
+.bg-charcoal { background-color: var(--color-charcoal); }
+.bg-off-white { background-color: var(--color-off-white); }
+.border-brass { border-color: var(--color-brass); }
+.ring-brass { --tw-ring-color: var(--color-brass); }
+
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1618221312383-3d3f90b9f2c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.section-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-button.active {
+    border-color: var(--color-brass);
+    color: var(--color-brass);
+    font-weight: 700;
+}
+
+.series-tab.active {
+    background-color: var(--color-charcoal);
+    color: white;
+}
+
+.advantage-card {
+    border: 1px solid var(--color-light-grey);
+    transition: all 0.3s ease-in-out;
+}
+.advantage-card:hover {
+    border-color: var(--color-brass);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.product-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
